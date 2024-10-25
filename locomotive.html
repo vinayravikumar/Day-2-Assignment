@@ -1,102 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
-    <title>Nest Digital</title>
+    <title>Nest Digital - Mobility Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #003366;
+            --secondary: #0099cc;
+            --accent: #ffd700;
+            --light: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card {
+            background: rgba(0, 51, 102, 0.1);
+            border: 1px solid rgba(0, 153, 204, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            color: var(--primary);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 153, 204, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--accent);
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-15px); }
+            60% { transform: translateY(-7px); }
+        }
+    </style>
 </head>
-
 <body>
-
-    <!--==========================
-      Header
-    ============================-->
-    <header id="header">
-        <div class="container-fluid">
-
-            <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">Nest Digital</a></h1>
-            </div>
-
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html">Home</a></li>
-                    <li class="menu-has-children"><a href="about.html">About Us</a>
-                        <ul>
-                            <li><a href="about.html">About US</a></li>
-                            <li><a href="timeline.html">Time Line</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="industries.html">Industries</a>
-
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
-        </div>
-    </header><!-- #header -->
-
-    <body>
-
-        <!--==========================
-      About Us Section
-    ============================-->
-        <section id="about">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
-
-                <header class="section-header">
-                    <h3>Locomotive</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.</p>
-                </header>
-
-                <div class="row about-cols">
-
-                    <div class="col-md-4 wow fadeInUp">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/about-mission.jpg" alt="Our Mission" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                            </div>
-                            <h2 class="title"><a href="aero.html">Locomotive</a></h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                    </div>
-
-
+                <a class="navbar-brand" href="#intro">NEST DIGITAL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link menu-active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                                About Us
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                                <li><a class="dropdown-item" href="timeline.html">Time Line</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="industries.html">Industries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-        </section><!-- #about -->
+            </div>
+        </nav>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Empowering Smart Mobility</h1>
+                    <p class="lead mb-4">Driving innovation in connected, sustainable, and seamless transportation solutions for the modern world.</p>
+                    <button class="btn btn-outline-light btn-lg px-4 me-3">Discover More</button>
+                    <button class="btn btn-light btn-lg px-4">Contact Us</button>
+                </div>
+            </div>
+        </div>
+        <a href="#services" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
 
-    </body>
+    <!-- Services Section -->
+    <section class="py-5" id="services" style="background-color: var(--light);">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-car-side service-icon"></i>
+                        <h3>Connected Vehicles</h3>
+                        <p>Integrating advanced connectivity features to enhance the driving experience and ensure safety.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-charging-station service-icon"></i>
+                        <h3>Electric Mobility</h3>
+                        <p>Accelerating the adoption of electric vehicles with scalable, sustainable charging solutions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="service-card">
+                        <i class="fas fa-route service-icon"></i>
+                        <h3>Smart Transport Systems</h3>
+                        <p>Optimizing transport flows through smart infrastructure and real-time data analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
