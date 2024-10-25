@@ -3,100 +3,177 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Nest Digital</title>
+    <title>Nest Digital - Healthcare Solutions</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
+    
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #047857;
+            --secondary-color: #065f46;
+            --accent-color: #34d399;
+            --light-color: #f0fdf4;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--light-color);
+        }
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+        /* Navbar Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 2rem;
+            color: var(--secondary-color);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 128, 96, 0.2);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-us-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+        }
+
+        .about-us-text {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+            line-height: 1.7;
+        }
+    </style>
 </head>
 
 <body>
-
-    <!--==========================
-      Header
-    ============================-->
-    <header id="header">
-        <div class="container-fluid">
-
-            <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">Nest Digital</a></h1>
-            </div>
-
-            <nav id="nav-menu-container">
-                <ul class="nav-menu">
-                    <li class="menu-active"><a href="index.html">Home</a></li>
-                    <li class="menu-has-children"><a href="about.html">About Us</a>
-                        <ul>
-                            <li><a href="about.html">About US</a></li>
-                            <li><a href="timeline.html">Time Line</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-has-children"><a href="">Industries</a>
-    
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav><!-- #nav-menu-container -->
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#intro">NEST DIGITAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link menu-active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                        About Us
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                        <li><a class="dropdown-item" href="timeline.html">Time Line</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="industries.html">Industries</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
-    </header><!-- #header -->
+    </div>
+</nav>
 
-    <body>
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container text-center text-lg-start">
+            <h1 class="hero-title">Innovating Healthcare Technology</h1>
+            <p class="lead">Delivering advanced healthcare solutions to ensure quality and efficient patient care across the globe.</p>
+            <button class="btn btn-outline-light btn-lg me-3">Learn More</button>
+            <button class="btn btn-light btn-lg">Contact Us</button>
+        </div>
+    </section>
 
-        <!--==========================
-      About Us Section
-    ============================-->
-        <section id="about">
-            <div class="container">
-
-                <header class="section-header">
-                    <h3>Healthcare</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.</p>
-                </header>
-
-                <div class="row about-cols">
-
-                    <div class="col-md-4 wow fadeInUp">
-                        <div class="about-col">
-                            <div class="img">
-                                <img src="img/about-mission.jpg" alt="Our Mission" class="img-fluid">
-                                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-                            </div>
-                            <h2 class="title"><a href="aero.html">Healthcare</a></h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore
-                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
+    <!-- About Us Section -->
+    <section class="about-us-section" id="about">
+        <div class="container">
+            <header class="text-center mb-5">
+                <h2 class="fw-bold" style="color: var(--primary-color);">About Us</h2>
+                <p class="about-us-text">Nest Digital is at the forefront of healthcare innovation, providing digital solutions that empower medical professionals and improve patient outcomes.</p>
+            </header>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-hospital-user service-icon"></i>
+                        <h4 class="my-3">Patient Management</h4>
+                        <p>Efficient and secure management of patient information, enhancing the patient care experience.</p>
                     </div>
-
-
                 </div>
-        </section><!-- #about -->
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-heartbeat service-icon"></i>
+                        <h4 class="my-3">Healthcare Analytics</h4>
+                        <p>Data-driven insights for better healthcare decisions and improved operational efficiency.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fas fa-stethoscope service-icon"></i>
+                        <h4 class="my-3">Telemedicine</h4>
+                        <p>Innovative telehealth solutions for seamless communication between doctors and patients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
-    </body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
